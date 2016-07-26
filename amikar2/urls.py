@@ -21,7 +21,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^website/', include('website.urls')),
     url(r'^$', views.index, name='index'),
-    url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.category, name='category')
+    url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.category, name='category'),
+    url(r'^product/' , views.product_view, name='product_view')
+
 
 
 ]

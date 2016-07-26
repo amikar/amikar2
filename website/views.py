@@ -17,6 +17,10 @@ def index(request):
 
     return render(request, 'index.html', context_dict)
 
+def product_view(request):
+    return render(request, 'product.html')
+
+
 def category(request, category_name_slug):
 
     # Create a context dictionary which we can pass to the template rendering engine.

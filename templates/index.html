@@ -1,321 +1,10 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html>
+{% include 'base.html' %}{% load static %}
 
-    <head>
-        <title>new website</title>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="static/css/overlay.css">
-            <script src="static/js/newjs.js" ></script>
-
-        <style>
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      margin: auto;}
-            body {
-                background-color: darkslategrey;
-  }
-
-
-    .center-icon{
-        text-align: center;
-        padding-top: 1em;
-        color: blanchedalmond;
-
-    }
-            i
-            {
-                padding-right: 3em;
-                padding-bottom: 2em;
-            }
-
-            #myCarousel
-            {
-                padding-top: 218px;
-            }
-            .img-fluid-1 {
-                width: 100%;
-                height: 300px;
-                padding-bottom: 1em;
-            }
-
-            .img-fluid-2 {
-                width: 100%;
-                height: 350px;
-            }
-            .img-fluid-3 {
-                width: 100%;
-                height: 600px;
-            }
-            .img-fluid-4 {
-                width: 100%;
-                height: 250px;
-            }
-            .navbar.navbar-default{
-                margin: 0;
-                padding: 0;
-
-            }
-            .fixed{
-                position: fixed;
-                z-index: 10000;
-                right: 0;
-                left: 0;
-                top: 0;
-            }
-
-            .logo{
-                height: 120px;
-                width: 200px;
-                margin: 0px auto;
-                display:block;
-
-                text-align: center;
-            }
-
-
-        .thumbnail{
-             background: none;
-             border: 0 none;
-            box-shadow: none;}
-        .two {
-	    	display: none;
-	    	}
-            .header {
-                position: fixed;
-                width: 100%;
-                z-index: 1;
-                    background:inherit;
-
-            }
-            header.header-2 {
-                display: none;
-            }
-
-            .navbar-login
-                {
-                    width: 305px;
-                    padding: 10px;
-                    padding-bottom: 0px;
-                }
-
-            .navbar-login-session
-                {
-                    padding: 10px;
-                    padding-bottom: 0px;
-                    padding-top: 0px;
-                }
-
-            .icon-size
-                {
-                    font-size: 87px;
-                }
-    </style>
-        <script type="text/javascript">
-        $(window).scroll(function() {
-  if ($(document).scrollTop() > 150) { 
-      $('header.header').slideUp(8); 
-      $('header.header-2').slideDown(8); 
-} else { 
-      $('header.header-2').stop().slideUp(8); 
-      $('header.header').stop().slideDown(8); 
-} 
-
-}); 	 
-        </script>
-
-
-
-
-    </head>
 
     <body>
 
 
-    <header class="header" >
-<!--  start of first bar -->
-
-<div class = "navbar navbar-default navbar-inverse navbar-static-top" role = "navigation">
-   <div class = "navbar-header ">
-      <button type = "button" class = "navbar-toggle"
-         data-toggle = "collapse" data-target = "#example-navbar-collapse">
-         <span class = "sr-only">Toggle navigation</span>
-         <span class = "icon-bar"></span>
-         <span class = "icon-bar"></span>
-         <span class = "icon-bar"></span>
-      </button>
-      <a class = "navbar-brand" href = "#">website-name</a>
-   </div>
-
-   <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
-
-      <ul class = "nav navbar-nav">
-         <li><a href = "#">dota 2</a></li>
-         <li><a href = "#">cs</a></li>
-
-         <li class = "dropdown">
-            <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
-               other games
-               <b class = "caret"></b>
-            </a>
-
-            <ul class = "dropdown-menu">
-               <li><a href = "#">lol</a></li>
-               <li><a href = "#">startcraft</a></li>
-               <li><a href = "#">wow</a></li>
-
-               <li class = "divider"></li>
-               <li><a href = "#">Separated link</a></li>
-
-               <li class = "divider"></li>
-               <li><a href = "#">One more separated link</a></li>
-            </ul>
-
-         </li>
-
-      </ul>
-   </div>
-</div>
-<div>
-        <img class = "logo" src = "http://www.clipartkid.com/images/796/40-batman-symbol-template-free-cliparts-that-you-can-download-to-you-6WoMAc-clipart.jpeg" >
-</div>
-<div class="navbar navbar-default" role="navigation">
-    <div class="container">
-
-        <div class="collapse navbar-collapse">
-            <div class = "navbar-header ">
-      <button type = "button" class = "navbar-toggle"
-         data-toggle = "collapse" data-target = "#example-navbar-collapse">
-         <span class = "sr-only">Toggle navigation</span>
-         <span class = "icon-bar"></span>
-         <span class = "icon-bar"></span>
-         <span class = "icon-bar"></span>
-      </button>
-      <a class = "navbar-brand" href = "#">website-name</a>
-   </div>
-
-   <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
-
-      <ul class = "nav navbar-nav">
-         <li><a href = "#">dota 2</a></li>
-         <li><a href = "#">cs</a></li>
-
-         <li class = "dropdown">
-            <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
-               other games
-               <b class = "caret"></b>
-            </a>
-
-            <ul class = "dropdown-menu">
-               <li><a href = "#">lol</a></li>
-               <li><a href = "#">startcraft</a></li>
-               <li><a href = "#">wow</a></li>
-
-               <li class = "divider"></li>
-               <li><a href = "#">Separated link</a></li>
-
-               <li class = "divider"></li>
-               <li><a href = "#">One more separated link</a></li>
-            </ul>
-
-         </li>
-
-      </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="glyphicon glyphicon-user"></span> 
-                        <strong>Your Name</strong>
-                        <span class="glyphicon glyphicon-chevron-down"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="navbar-login">
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <p class="text-center">
-                                            <span class="glyphicon glyphicon-user icon-size"></span>
-                                        </p>
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <p class="text-left"><strong>Name</strong></p>
-                                        <p class="text-left small">email</p>
-                                        <p class="text-left">
-                                            <a href="#" class="btn btn-primary btn-block btn-sm">View Full Profile</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <div class="navbar-login navbar-login-session">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <p>
-                                            <a href="#" class="btn btn-danger btn-block">Logout</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-</div>
-    </header>
-
-<header class = "header-2" >
-<div class = "navbar navbar-default navbar-fixed-top" role = "navigation">
-   <div class = "navbar-header ">
-      <button type = "button" class = "navbar-toggle"
-         data-toggle = "collapse" data-target = "#example-navbar-collapse">
-         <span class = "sr-only">Toggle navigation</span>
-         <span class = "icon-bar"></span>
-         <span class = "icon-bar"></span>
-         <span class = "icon-bar"></span>
-      </button>
-
-      <a class = "navbar-brand" href = "#">website-name-2</a>
-   </div>
-
-   <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
-
-      <ul class = "nav navbar-nav">
-         <li><a href = "#">dota 2</a></li>
-         <li><a href = "#">cs</a></li>
-
-         <li class = "dropdown">
-            <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
-               other games
-               <b class = "caret"></b>
-            </a>
-
-            <ul class = "dropdown-menu">
-               <li><a href = "#">lol</a></li>
-               <li><a href = "#">startcraft</a></li>
-               <li><a href = "#">wow</a></li>
-
-               <li class = "divider"></li>
-               <li><a href = "#">Separated link</a></li>
-
-               <li class = "divider"></li>
-               <li><a href = "#">One more separated link</a></li>
-            </ul>
-
-         </li>
-
-      </ul>
-   </div>
-</div>
-    </header>
+   {% include 'header.html' %}
 
 
 <!-- end of first bar -->
@@ -349,22 +38,23 @@
 -->
 
 
-
 <!-- start of carausel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
-
+      <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner" role="listbox" id = "maincarousel">
          <div class="item active">
-        <img src="{% static "images/first-image.png" %}" alt="world route map" />    </div>
+        <img src="{% static "images/608335-min.jpg" %}" alt="Dota-2" />    </div>
       <div class="item">
-        <img src="{% static "images/first-image.png" %}" alt="world route map" />    </div>
+        <img src="{% static "images/destiny_wallpaper.jpg" %}" alt="destiny-1" />    </div>
+      <div class="item">
+        <img src="{% static "images/assassins_creed.jpg" %}" alt="assassins" />    </div>
 
   </div>
 
@@ -378,6 +68,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+
 
 <!-- end of carausel -->
 
@@ -396,43 +88,43 @@
 
 
 <!-- start of articles and end of social media icons -->
+<div class="container-fluid full-width">
+<div class="row row-no-gutter">
+  <div class="col-xs-6 col-md-4" >
+    <a href="#" class="thumbnail">
+      <img src="static/images/gta.jpg" class="img-full-width" alt="for row">
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-4" >
+    <a href="#" class="thumbnail">
+      <img src="static/images/cs-go.jpg" class="img-full-width" alt="for row">
+    </a>
+  </div>
+    <div class="col-xs-6 col-md-4" >
+    <a href="#" class="thumbnail">
+      <img src="static/images/half-life.jpg" class="img-full-width" alt="for row">
+    </a>
+  </div>
 
-<div class="row">
-  <div class="col-xs-6 col-md-4">
+  <div class="col-xs-6 col-md-4" >
     <a href="#" class="thumbnail">
-      <img src="static/images/first-image.png" alt="for row">
+      <img src="static/images/witcher.jpg" class="img-full-width" alt="for row">
     </a>
   </div>
-    <div class="col-xs-6 col-md-4">
+    <div class="col-xs-6 col-md-4" >
     <a href="#" class="thumbnail">
-      <img src="static/images/first-image.png" alt="for row">
+      <img src="static/images/pokemon.png" class="img-full-width" alt="for row">
     </a>
   </div>
-    <div class="col-xs-6 col-md-4">
+    <div class="col-xs-6 col-md-4" >
     <a href="#" class="thumbnail">
-      <img src="static/images/first-image.png" alt="for row">
-    </a>
-  </div>
-
-  <div class="col-xs-6 col-md-4">
-    <a href="#" class="thumbnail">
-      <img src="static/images/first-image.png" alt="for row">
-    </a>
-  </div>
-    <div class="col-xs-6 col-md-4">
-    <a href="#" class="thumbnail">
-      <img src="static/images/first-image.png" alt="for row">
-    </a>
-  </div>
-    <div class="col-xs-6 col-md-4">
-    <a href="#" class="thumbnail">
-      <img src="static/images/first-image.png" alt="for row">
+      <img src="static/images/overw.jpg" class="img-full-width" alt="for row">
     </a>
   </div>
 </div>
-
+</div>
 <!-- first image -->
- <img src="static/images/first-image.png" class="img-fluid-1" alt="Responsive image">
+ <img src="static/images/star.jpg" class="img-fluid-1" alt="Responsive image">
 
 <!-- end of image -->
 
@@ -440,70 +132,117 @@
         <div class="container">
 
         <div class="row">
+            <!--
+            <p> test </p> <a href="{% url 'product_view' %}">logout</a>
+                -->
 
-
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
+                    <img class="img-responsive" src="static/images/gallery/witcher-phone.jpg" alt="">
                 </a>
                 <div class="carousel-caption">
-              <h1>example text</h1>
+
+              <h4 class="caption1" > Skins and Covers</h4>
             </div>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="static/images/first-image.png" alt="">
+                    <img class="img-responsive" src="static/images/gallery/mirrors-poster.jpg" alt="">
                 </a>
+                <div class="carousel-caption">
+
+              <h4 class="caption1" > Posters</h4>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="static/images/gallery/star-wars-t.jpg" alt="">
+                </a>
+                <div class="carousel-caption">
+
+              <h4 class="caption1" > T-shirts</h4>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="static/images/gallery/call-of-duty-bag.jpg" alt="">
+                </a>
+                <div class="carousel-caption">
+
+            <h4 class="caption1" > Bags</h4>
+            </div></div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="static/images/gallery/poke-mug.jpg" alt="">
+                </a>
+                <div class="carousel-caption">
+
+              <h4 class="caption1" > Drinkware</h4>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="static/images/gallery/metal-gear.jpg" alt="">
+                </a>
+                <div class="carousel-caption">
+
+              <h4 class="caption1" > Action Figures</h4>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="static/images/gallery/over-keychains.jpg" alt="">
+                </a>
+                <div class="carousel-caption">
+
+              <h4 class="caption1" > Accessories</h4>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="static/images/gallery/meepo.jpg" alt="">
+                </a>
+                <div class="carousel-caption">
+
+              <h4 class="caption1" > Wall-Hangings</h4>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="static/images/gallery/mario-plant.jpg" alt="">
+                </a>
+                <div class="carousel-caption">
+
+              <h4 class="caption1" > Plush's</h4>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="static/images/gallery/collectors-edition.jpg" alt="">
+                </a>
+                <div class="carousel-caption">
+
+              <h4 class="caption1" > Collectors-Edition</h4>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="static/images/gallery/gta-hood.jpg" alt="">
+                </a>
+                <div class="carousel-caption">
+
+              <h4 class="caption1" > Hoodies</h4>
+            </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="static/images/gallery/pac-mouse.jpg" alt="">
+                </a>
+                <div class="carousel-caption">
+
+              <h4 class="caption1" > Mousepads</h4>
+            </div>
+
             </div>
         </div>
         </div>
@@ -516,11 +255,11 @@
 <div class="col-sm-12">
 <div class="section-title">
 <div class="title pull-left">
-<a href="http://www.nextbootstrap.com/" title="">Deals of the day</a>
+<a href="#" title="">Deals of the day</a>
 <div class="arrow-left"></div>
 </div>
 <div class="view-all pull-right">
-<div class="view"><a href="http://www.nextbootstrap.com/" title="">View All</a></div>
+<div class="view"><a href="#" title="">View All</a></div>
 <div class="arrow-right"></div>
 </div>
 </div>
@@ -532,18 +271,18 @@
 <div class="col-md-3 col-sm-6">
 <div class="product-single">
 <div class="image">
-<img src="static/images/first-image.png" class="img-responsive center-block" alt="">
+<img src="static/images/gallery/items/destiny-t.jpg" class="img-responsive center-block" alt="">
     <div class="quick-view">
-        <a href="http://www.nextbootstrap.com/" title="" class="btn btn-theme">Quick View</a>
+        <a href="#" title="" class="btn btn-theme">Quick View</a>
     </div>
 </div>
 <div class="info">
     <span class="compare"><i class="fa fa-sliders"></i></span>
     <div class="add-to-cart"><button class="btn btn-cart" type="">Add to Cart</button></div>
     <span class="wishlist"><i class="fa fa-heart"></i></span>
-    <h2 class="product-name">Men's Shirt</h2>
+    <h2 class="product-name">Destiny T-shirt</h2>
 
-    <div class="price"><span class="old"><small><del>$200</del></small></span> <span class="new">$170</span></div>
+    <div class="price"><span class="old"><small><del>45$</del></small></span> <span class="new">29$</span></div>
 </div>
 </div>
 </div>
@@ -551,18 +290,18 @@
 <div class="col-md-3 col-sm-6">
 <div class="product-single">
 <div class="image">
-<img src="static/images/first-image.png" class="img-responsive center-block" alt="">
+<img src="static/images/gallery/items/dota2-demi.jpg" class="img-responsive center-block" alt="">
     <div class="quick-view">
-        <a href="http://www.nextbootstrap.com/" title="" class="btn btn-theme">Quick View</a>
+        <a href="#" title="" class="btn btn-theme">Quick View</a>
     </div>
 </div>
 <div class="info">
     <span class="compare"><i class="fa fa-sliders"></i></span>
     <div class="add-to-cart"><button class="btn btn-cart" type="">Add to Cart</button></div>
     <span class="wishlist"><i class="fa fa-heart"></i></span>
-    <h2 class="product-name">Men's Shirt</h2>
+    <h2 class="product-name">Demiheroes</h2>
 
-    <div class="price"><span class="old"><small><del>$200</del></small></span> <span class="new">$170</span></div>
+    <div class="price"><span class="old"><small><del>30$</del></small></span> <span class="new">25$</span></div>
 </div>
 </div>
 </div>
@@ -570,18 +309,18 @@
 <div class="col-md-3 col-sm-6">
 <div class="product-single">
 <div class="image">
-<img src="static/images/first-image.png" class="img-responsive center-block" alt="">
+<img src="static/images/gallery/items/zelda-fig.jpg" class="img-responsive center-block" alt="">
     <div class="quick-view">
-        <a href="http://www.nextbootstrap.com/" title="" class="btn btn-theme">Quick View</a>
+        <a href="#" title="" class="btn btn-theme">Quick View</a>
     </div>
 </div>
 <div class="info">
     <span class="compare"><i class="fa fa-sliders"></i></span>
     <div class="add-to-cart"><button class="btn btn-cart" type="">Add to Cart</button></div>
     <span class="wishlist"><i class="fa fa-heart"></i></span>
-    <h2 class="product-name">Men's Shirt</h2>
+    <h2 class="product-name">Link Figure</h2>
 
-    <div class="price"><span class="old"><small><del>$200</del></small></span> <span class="new">$170</span></div>
+    <div class="price"><span class="old"><small><del>70$</del></small></span> <span class="new">$47</span></div>
 </div>
 </div>
 </div>
@@ -589,18 +328,18 @@
 <div class="col-md-3 col-sm-6">
 <div class="product-single">
 <div class="image">
-<img src="static/images/first-image.png" class="img-responsive center-block" alt="">
+<img src="static/images/gallery/items/star-wars-merch.jpg" class="img-responsive center-block" alt="">
     <div class="quick-view">
-        <a href="http://www.nextbootstrap.com/" title="" class="btn btn-theme">Quick View</a>
+        <a href="#" title="" class="btn btn-theme">Quick View</a>
     </div>
 </div>
 <div class="info">
     <span class="compare"><i class="fa fa-sliders"></i></span>
     <div class="add-to-cart"><button class="btn btn-cart" type="">Add to Cart</button></div>
     <span class="wishlist"><i class="fa fa-heart"></i></span>
-    <h2 class="product-name">Men's Shirt</h2>
+    <h2 class="product-name">Star Wars Fighter Building block</h2>
 
-    <div class="price"><span class="old"><small><del>$200</del></small></span> <span class="new">$170</span></div>
+    <div class="price"><span class="old"><small><del>$120</del></small></span> <span class="new">$105</span></div>
 </div>
 </div>
 </div>
@@ -611,93 +350,15 @@
 </section>
 <!-- end of priced items -->
 
- <img src="static/images/first-image.png" class="img-fluid-2" alt="Responsive image">
+ <img src="static/images/rocket.jpg" class="img-fluid-2" alt="Responsive image">
 
- <img src="static/images/first-image.png" class="img-fluid-3" alt="Responsive image">
- <img src="static/images/first-image.png" class="img-fluid-4" alt="Responsive image">
-
-
-
-<!-- website footer 2 -->
-<footer class="nb-footer">
-<div class="container">
-<div class="row">
-<div class="col-sm-12">
-<div class="about">
-	<img src="static/images/ng" class="img-responsive center-block" alt="">
-	<p>para 2</p>
-<div class="center-icon">
-<i class="fa fa-facebook"></i>
+ <img src="static/images/zelda.jpg" class="img-fluid-3" alt="Responsive image">
+ <img src="static/images/dmc.jpg" class="img-fluid-4" alt="Responsive image">
 
 
 
-<i class="fa fa-instagram"></i>
+<!-- website footer -->
+      {% include 'footer.html' %}
 
-<i class="fa fa-skype"></i>
-<i class="fa fa-twitter"></i>
-<i class="fa fa-spotify"></i>
-</div>
 
-</div>
-</div>
-
-<div class="col-md-3 col-sm-6">
-<div class="footer-info-single">
-	<h2 class="title">Help Center</h2>
-	<ul class="list-unstyled">
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Delivery Info</a></li>
-	</ul>
-</div>
-</div>
-
-<div class="col-md-3 col-sm-6">
-<div class="footer-info-single">
-	<h2 class="title">Customer information</h2>
-	<ul class="list-unstyled">
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> About Us</a></li>
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Sell Your Items</a></li>
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> RSS</a></li>
-	</ul>
-</div>
-</div>
-
-<div class="col-md-3 col-sm-6">
-<div class="footer-info-single">
-	<h2 class="title">Security & privacy</h2>
-	<ul class="list-unstyled">
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a></li>
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a></li>
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Return / Refund Policy</a></li>
-		<li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Store Locations</a></li>
-	</ul>
-</div>
-</div>
-
-<div class="col-md-3 col-sm-6">
-<div class="footer-info-single">
-	<h2 class="title">Payment</h2>
-	<p>paragraph 1</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<section class="copyright">
-<div class="container">
-<div class="row">
-<div class="col-sm-6">
-<p>Copyright</p>
-</div>
-<div class="col-sm-6"></div>
-</div>
-</div>
-</section>
-</footer>
-    </body>
 
