@@ -1,7 +1,14 @@
 from django.shortcuts import render
+from django.template import RequestContext
+
 from website.models import Category
 from website.models import Page
-
+from django.contrib.auth.models import User
+from website.models import UserProfile
+from website.models import UserForm, UserProfileForm
+from django.http import HttpResponse
+from django.shortcuts import render_to_response
+from amikar2.settings import STATICFILES_DIRS
 
 # Create your views here.
 def index(request):
@@ -19,6 +26,9 @@ def index(request):
 
 def product_view(request):
     return render(request, 'product.html')
+
+def login_view(request):
+    return render(request, 'login.html')
 
 
 def category(request, category_name_slug):
@@ -49,3 +59,37 @@ def category(request, category_name_slug):
 
     # Go render the response and return it to the client.
     return render(request, 'category.html', context_dict)
+
+def register(request):
+        context = RequestContext(request)
+        registered = False
+        if request.method == 'POST':
+                uform = UserForm(data = request.POST)
+                pform = UserProfileForm(data = request.POST)
+                if uform.is_valid() and pform.is_valid():
+                        user = uform.save()
+                        # form brings back a plain text string, not an encrypted password
+                        pw = user.password
+                        # thus we need to use set password to encrypt the password string
+                        user.set_password(pw)
+                        user.save()
+                        profile = pform.save(commit = False)
+                        profile.user = user
+                        profile.save()
+                        save_file(request.FILES['picture'])
+                        registered = True
+                else:
+                        print uform.errors, pform.errors
+        else:
+                uform = UserForm()
+                pform = UserProfileForm()
+
+        return render_to_response('register.html', {'uform': uform, 'pform': pform, 'registered': registered }, context)
+
+
+def save_file(file, path=''):
+        filename = file._get_name()
+        fd = open('%s/%s' % (STATICFILES_DIRS, str(path) + str(filename)), 'wb' )
+        for chunk in file.chunks():
+                fd.write(chunk)
+        fd.close()

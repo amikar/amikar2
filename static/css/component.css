@@ -66,7 +66,6 @@
 .cbp-hsmenu > li > a:not(:only-child):before {
 	display: inline-block;
 	font-family: 'bpmenu';
-	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -111,13 +110,13 @@
 	visibility: hidden;
 }
 
-.cbp-hssubmenu:before, 
-.cbp-hssubmenu:after { 
-	content: " "; 
-	display: table; 
+.cbp-hssubmenu:before,
+.cbp-hssubmenu:after {
+	content: " ";
+	display: table;
 }
-.cbp-hssubmenu:after { 
-	clear: both; 
+.cbp-hssubmenu:after {
+	clear: both;
 }
 
 /* Let's allow 6 item in a row */
@@ -135,7 +134,7 @@
 /* First 6 items don't have upper box shadow */
 .cbp-hssubmenu > li:nth-child(-n+6) {
 	box-shadow: -28px 0 0 -27px #ddd;
-} 
+}
 
 /* Every 7th item does not have a left box shadow */
 .cbp-hssubmenu > li:nth-child(6n+1) {
@@ -278,7 +277,7 @@
 	/* First 4 items don't have upper box shadow */
 	.cbp-hssubmenu > li:nth-child(-n+3) {
 		box-shadow: -28px 0 0 -27px #ddd;
-	} 
+	}
 
 	/* Every 5th item does not have a left box shadow */
 	.cbp-hssubmenu > li:nth-child(3n+1) {

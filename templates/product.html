@@ -1,249 +1,675 @@
 {% include 'base.html' %}{% load static %}
-<head>
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-            <link rel="stylesheet" href="static/css/animate.css">
-
-            	<link rel="stylesheet" type="text/css" href="static/css/default.css" />
-		<link rel="stylesheet" type="text/css" href="static/css/component.css" />
-
-            <link rel="stylesheet" href="static/css/overlay.css">
-
-    </style>
-</head>
 
 
 <body>
 {% include 'header.html' %}
 
 
+<style>
+    body {
+    background-color: #252120;
+    }
+
+    .top  {
+        padding-top: 150px;
+    }
+    .breadcrumbDiv ul {
+        background-color: white;
+    }
+
+</style>
+           <link rel="stylesheet" href="/static/css/category.css">
 
 
-<br>
-<br>
-<br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br>
 
-<div class="container">
-    <div class="col-md-12">
-        <div class="center-block text-center">
-            <h1>E-Commerce Template</h1>
-            <p class="lead">Get Your Style On</p>
+<div class = "top">
+<div class="container main-container headerOffset" >
+
+    <!-- Main component call to action -->
+
+    <div class="row">
+        <div class="breadcrumbDiv col-lg-12">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">GAMES: </li>
+            </ul>
         </div>
-        <div class="container">
-            <div class="menu row">
-                <div class="product col-sm-6">
-                  <a href="#"><img class="img-responsive" src="/assets/example/ec_guy.jpg"><i class="btn btn-product fa fa-star"></i></a>
-					<hr>
-                    <h2>Denim Jacket</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                    Aliquam in felis sit amet augue.</p>
-                    <hr>
-                  	<h2 class="text-right">$39</h2>
-                    <button class="btn btn-primary btn-lg ">Add to Cart</button>
-                    <hr>
+    </div>
+    <!-- /.row  -->
 
+    <div class="row">
 
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#reviews">Reviews</a></li>
-                        <li><a data-toggle="tab" href="#details">Details</a></li>
-                        <li><a data-toggle="tab" href="#sizing">Sizing</a></li>
-                    </ul>
+        <!--left column-->
 
-                  	<div class="tab-content">
-                      <div class="tab-pane active" id="reviews">
-
-                        <h4>Buyer Reviews</h4>
-                        <ul class="list-unstyled">
-                          <li class="clearfix">(Mike R.) I bought this last month before a.. <i class="fa fa-star fa-2x yellow pull-right"></i></li>
-                          <li class="clearfix">(Karen) The size of this jacket was a little larger.. <i class="fa fa-star fa-2x yellow pull-right"></i></li>
-                          <li class="clearfix">(CAS) I love this jacket. I purchased this as part..  <i class="fa fa-star fa-2x yellow pull-right"></i><i class="fa fa-star fa-2x yellow pull-right"></i></li>
-                          <li class="clearfix">(William D.) Great value with cool style. If you want.. <i class="fa fa-star fa-2x yellow pull-right"></i></li>
-                        </ul>
-
-                      </div>
-                      <div class="tab-pane" id="details"><h4>Product Information</h4></div>
-                      <div class="tab-pane" id="sizing"><h4>Size Chart</h4></div>
-                     </div>
-
-
-                </div>
-                <div class="col-sm-6">
-                    <div class="productsrow">
-                        <div class="product menu-category">
-                            <div class="menu-category-name list-group-item active">Accessories</div>
-                            <div class="product-image">
-                                <img class="product-image menu-item list-group-item" src="/assets/example/ec_belt.jpg">
-                            </div> <a href="#" class="menu-item list-group-item">Belt<span class="badge">£28</span></a>
-
-                        </div>
-                        <div class="product menu-category">
-                            <div class="menu-category-name list-group-item active">Jeans</div>
-                            <div class="product-image">
-                                <img class="product-image menu-item list-group-item" src="/assets/example/ec_jeans.jpg">
-                            </div> <a href="#" class="menu-item list-group-item">Dark Blue Jeans<span class="badge">$80</span></a>
-
-                        </div>
-                        <div class="product menu-category">
-                            <div class="menu-category-name list-group-item active">Pants</div>
-                            <div class="product-image">
-                                <img class="product-image menu-item list-group-item" src="/assets/example/ec_pants.jpg">
-                            </div> <a href="#" class="menu-item list-group-item">Light Grean Chinos<span class="badge">$59</span></a>
-
-                        </div>
-                        <div class="product menu-category">
-                            <div class="menu-category-name list-group-item active">Denim</div>
-                            <div class="div-image">
-                                <img class="product-image menu-item list-group-item" src="/assets/example/ec_jacket.jpg">
-                            </div> <a href="#" class="menu-item list-group-item">Denim Jacket<span class="badge">$56</span></a>
-
-                        </div>
-                        <div class="product menu-category">
-                            <div class="menu-category-name list-group-item active">Accessories</div>
-                            <div class="product-image">
-                                <img class="product-image menu-item list-group-item" src="/assets/example/ec_socks.jpg">
-                            </div> <a href="#" class="menu-item list-group-item">Socks<span class="badge">$56</span></a>
-
-                        </div>
-                        <div class="product menu-category">
-                            <div class="menu-category-name list-group-item active">Belt</div>
-                            <div class="product-image">
-                                <img class="product-image menu-item list-group-item" src="/assets/example/ec_belt.jpg">
-                            </div> <a href="#" class="menu-item list-group-item">Brown Belt<span class="badge">£18</span></a>
-
-                        </div>
-                        <div class="product menu-category">
-                            <div class="menu-category-name list-group-item active">Layer</div>
-                            <div class="product-image">
-                                <img class="product-image menu-item list-group-item" src="/assets/example/ec_sweater.jpg">
-                            </div> <a href="#" class="menu-item list-group-item">Shawl Neck<span class="badge">46</span></a>
-
+        <div class="col-lg-3 col-md-3 col-sm-12">
+            <div class="panel-group" id="accordionNo">
+                <!--Category-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a data-toggle="collapse" href="#collapseCategory"
+                                                   class="collapseWill active ">
+                            <span class="pull-left"> <i class="fa fa-caret-right"></i></span> Category </a></h4>
+                    </div>
+                    <div id="collapseCategory" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked tree">
+                                <li class="active dropdown-tree open-tree"><a class="dropdown-tree-a"> <span
+                                        class="badge pull-right">12</span> Merch </a>
+                                    <ul class="category-level-2 dropdown-menu-tree">
+                                        <li class="dropdown-tree"><a class="dropdown-tree-a" href="sub-category.html">
+                                            Tshirt</a></li>
+                                        <li><a href="sub-category.html">T-shirts</a></li>
+                                        <li><a href="sub-category.html">Phone Covers</a></li>
+                                        <li><a href="sub-category.html">Mousepads</a></li>
+                                        <li><a href="sub-category.html">Wall-Hangings</a></li>
+                                        <li><a href="sub-category.html">Figurines</a></li>
+                                        <li><a href="sub-category.html">Keychains</a></li>
+                                        <li><a href="sub-category.html">Plush</a></li>
+                                        <li><a href="sub-category.html">Posters</a></li>
+                                        <li><a href="sub-category.html">Mugs</a></li>
+                                        <li><a href="sub-category.html">Mouse</a></li>
+                                        <li><a href="sub-category.html">Hoodies</a></li>
+                                        <li><a href="sub-category.html">Special Edition</a></li>
+                                        <li><a href="sub-category.html">PS4 Skins</a></li>
+                                        <li><a href="sub-category.html">Electronics</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"> <span class="badge pull-right">-</span> DOTA 2 </a></li>
+                                <li><a href="#"> <span class="badge pull-right">-</span> ASSASSINS CREED </a></li>
+                                <li><a href="#"> <span class="badge pull-right">-</span> DESTINY </a></li>
+                                <li><a href="#"> <span class="badge pull-right">-</span> MINECRAFT </a></li>
+                                <li><a href="#"> <span class="badge pull-right">-</span> LEAGUE OF LEGENDS </a></li>
+                                <li><a href="#"> <span class="badge pull-right">-</span> CS: GO </a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+                <!--/Category menu end-->
+                <!--/price panel end
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a class="collapseWill active " data-toggle="collapse"
+                                                   href="#collapsePrice">
+                            Price <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a> <span
+                                class="pull-right clearFilter  label-danger"> Clear </span></h4>
+                    </div>
+                    <div id="collapsePrice" class="panel-collapse collapse in">
+                        <div class="panel-body priceFilterBody">
+
+                            <label>
+                                <input type="radio" name="agree" value="0"/>
+                                100$ - 500$</label>
+                            <br>
+                            <label>
+                                <input type="radio" name="agree" value="1"/>
+                                500$ - 1000$</label>
+                            <br>
+                            <label>
+                                <input type="radio" name="agree" value="2"/>
+                                1000$ - 1500$</label>
+                            <br>
+                            <label>
+                                <input type="radio" name="agree" value="3"/>
+                                1500$ - 2000$</label>
+                            <br>
+                            <label>
+                                <input type="radio" name="agree" value="4"/>
+                                2000$ - 2500$</label>
+                            <br>
+                            <label>
+                                <input type="radio" name="agree" value="5"/>
+                                2500$ - 3000$</label>
+                            <br>
+                            <label>
+                                <input type="radio" name="agree" value="6" disabled checked/>
+                                Don't know</label>
+                            <hr>
+                            <p>Enter a Price range </p>
+
+                            <form class="form-inline " role="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleInputEmail2"
+                                           placeholder="2000 $">
+                                </div>
+                                <div class="form-group sp"> -</div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleInputPassword2"
+                                           placeholder="3000 $">
+                                </div>
+                                <button type="submit" class="btn btn-default pull-right">check</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+
+                <!--/brand panel end-->
+
+
+                <!--/color panel end-->
+                 <!--/discount
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"><a data-toggle="collapse" href="#collapseThree"
+                                                   class="collapseWill active ">
+                            Discount <span class="pull-left"> <i class="fa fa-caret-right"></i></span> </a></h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="block-element">
+                                <label>
+                                    <input type="checkbox" name="tour" value="3"/>
+                                    Non-Discounted items </label>
+                            </div>
+                            <div class="block-element">
+                                <label>
+                                    <input type="checkbox" name="tour" value="3"/>
+                                    Discounted items </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                panel end-->
             </div>
-            <!--/row-->
+
         </div>
-        <!--/container-->
-    </div>
-</div>
 
-<hr>
+        <!--right column-->
+        <div class="col-lg-9 col-md-9 col-sm-12">
+            <div class="w100 clearfix category-top">
 
-<div class="container">
+                <div class="categoryImage"><img src="/static/images/ff.jpg" class="img-responsive" alt="img"></div>
+            </div>
+            <!--/.category-top-->
 
-             <div class="row">
-
-               <div class="col-sm-3">
-                 <a href="#">
-                   <br>
-                   <img class="img-responsive" src="http://www.bootply.com/assets/example/ec_socks.jpg" data-alt="" data-title="">
-                 </a>
-                 <br>
-
+            <div class="row subCategoryList clearfix">
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
+                    <div class="thumbnail equalheight"><a class="subCategoryThumb" href="sub-category.html"><img
+                            src="/static/images/gallery/star-wars-t.jpg" class="img-rounded " alt="img"> </a> <a class="subCategoryTitle"><span> T shirt </span></a>
+                    </div>
                 </div>
-                <div class="col-sm-9">
-
-                  <h2><a class="url" href="#"> Gentleman's Socks</a></h2>
-
-                  <ul class="list-group ticketView">
-                      <li class="list-group-item ticketView">
-                          <span class="label label-default">Color</span>
-                          <label> Oatmeal</label>
-                      </li>
-                      <li class="list-group-item ticketView">
-                          <span class="label label-default">Material</span>
-                          <label> Cotton</label>
-                      </li>
-                      <li class="list-group-item ticketView">
-                          <span class="label label-default">Sizes</span>
-                          <label> Mens's 5-10, 8-12</label>
-                      </li>
-                      <li class="list-group-item ticketView">
-                          <span class="label label-default">Stock #</span>
-                           N12325
-                      </li>
-                  </ul>
-
-                </div><!--/col-->
-            </div><!--/row-->
-
-            <div class="row">
-
-               <div class="col-sm-3">
-                 <a href="#">
-                   <br>
-                   <img class="img-responsive" src="http://www.bootply.com/assets/example/ec_socks.jpg" data-alt="" data-title="">
-                 </a>
-                 <br>
-
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
+                    <div class="thumbnail equalheight"><a class="subCategoryThumb" href="sub-category.html"><img
+                            src="/static/images/gallery/pac-mouse.jpg" class="img-rounded " alt="img"> </a> <a
+                            class="subCategoryTitle"><span> Mousepad </span></a></div>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
+                    <div class="thumbnail equalheight"><a class="subCategoryThumb" href="sub-category.html"><img
+                            src="/static/images/gallery/metal-gear.jpg" class="img-rounded " alt="img"> </a> <a class="subCategoryTitle"><span> Action Figures </span></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
+                    <div class="thumbnail equalheight"><a class="subCategoryThumb" href="sub-category.html"><img
+                            src="/static/images/gallery/over-keychains.jpg" class="img-rounded " alt="img"> </a> <a
+                            class="subCategoryTitle"><span> Accessories </span></a></div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
+                    <div class="thumbnail equalheight"><a class="subCategoryThumb" href="sub-category.html"><img
+                            src="/static/images/gallery/call-of-duty-bag.jpg" class="img-rounded  " alt="img"> </a> <a
+                            class="subCategoryTitle"><span> Electronics </span></a></div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center">
+                    <div class="thumbnail equalheight"><a class="subCategoryThumb" href="sub-category.html"><img
+                            src="/static/images/gallery/collectors-edition.jpg" class="img-rounded " alt="img"> </a> <a
+                            class="subCategoryTitle"><span> Special's </span></a></div>
+                </div>
+            </div>
+            <!--/.subCategoryList-->
 
-                  <h2><a class="url" href="#"> Gentleman's Socks</a></h2>
+            <div class="w100 productFilter clearfix">
+                <p class="pull-left"> Showing <strong>12</strong> products </p>
 
-                  <ul class="list-group ticketView">
-                      <li class="list-group-item ticketView">
-                          <span class="label label-default">Color</span>
-                          <label> Oatmeal</label>
-                      </li>
-                      <li class="list-group-item ticketView">
-                          <span class="label label-default">Material</span>
-                          <label> Cotton</label>
-                      </li>
-                      <li class="list-group-item ticketView">
-                          <span class="label label-default">Sizes</span>
-                          <label> Mens's 5-10, 8-12</label>
-                      </li>
-                      <li class="list-group-item ticketView">
-                          <span class="label label-default">Stock #</span>
-                           N12325
-                      </li>
-                  </ul>
+                <div class="pull-right ">
+                    <div class="change-order pull-right">
+                        <select class="form-control" name="orderby">
+                            <option selected="selected">Default sorting</option>
+                            <option value="popularity">Sort by popularity</option>
+                            <option value="rating">Sort by average rating</option>
+                            <option value="date">Sort by newness</option>
+                            <option value="price">Sort by price: low to high</option>
+                            <option value="price-desc">Sort by price: high to low</option>
+                        </select>
+                    </div>
+                    <div class="change-view pull-right"><a href="#" title="Grid" class="grid-view"> <i
+                            class="fa fa-th-large"></i> </a> <a href="#" title="List" class="list-view "><i
+                            class="fa fa-th-list"></i></a></div>
+                </div>
+            </div>
+            <!--/.productFilter-->
+            <div class="row  categoryProduct xsResponse clearfix">
 
-                </div><!--/col-->
-            </div><!--/row-->
+                <div class="item itemauto col-sm-4 col-lg-4 col-md-4 col-xs-6">
+                    <div class="product">
+                        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
+                           data-placement="left">
+                            <i class="glyphicon glyphicon-heart"></i>
+                        </a>
 
-            <hr>
-</div><!--/container-->
 
-<div class="modal fade" id="myModal">
-	<div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title">Log In</h4>
+                        <div class="imageHover">
+
+                            <div class="promotion"><span class="discount">15% OFF</span></div>
+
+                            <div id="carousel-id-1" class="carousel slide" data-ride="carousel" data-interval="0">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-id-1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-id-1" data-slide-to="1"></li>
+                                    <li data-target="#carousel-id-1" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><a href="product-details.html"> <img
+                                            src="/static/images/gallery/poke-mug.jpg" alt="img" class="img-responsive "></a></div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-id-1" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-id-1" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="description">
+                            <h4><a href="product-details.html"> item head </a></h4>
+
+                            <div class="grid-description">
+                                <p>head title of images</p>
+                            </div>
+                            <div class="list-description">
+                                <p> description here</p>
+                            </div>
+                            <span class="size">XL / XXL / S </span></div>
+                        <div class="price"><span>$25</span></div>
+                        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
+                                class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
+                    </div>
+                </div>
+                <!--/.item-->
+
+
+                <div class="item itemauto col-sm-4 col-lg-4 col-md-4 col-xs-6">
+                    <div class="product">
+                        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
+                           data-placement="left">
+                            <i class="glyphicon glyphicon-heart"></i>
+                        </a>
+
+
+                        <div class="imageHover">
+
+                            <div id="carousel-id-2" class="carousel slide carousel-fade" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-id-2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-id-2" data-slide-to="1"></li>
+                                    <li data-target="#carousel-id-2" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><a href="product-details.html"> <img
+                                            src="/static/images/gallery/poke-mug.jpg" alt="img" class="img-responsive "></a></div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-id-2" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-id-2" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="description">
+                            <h4><a href="product-details.html"> item head </a></h4>
+
+                            <div class="grid-description">
+                                <p>item title  </p>
+                            </div>
+                            <div class="list-description">
+                                <p> item desc </p>
+                            </div>
+                            <span class="size">XL / XXL / S </span></div>
+                        <div class="price"><span>$25</span></div>
+                        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
+                                class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
+                    </div>
+                </div>
+
+
+                <div class="item itemauto col-sm-4 col-lg-4 col-md-4 col-xs-6">
+                    <div class="product">
+                        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
+                           data-placement="left">
+                            <i class="glyphicon glyphicon-heart"></i>
+                        </a>
+
+
+                        <div class="imageHover hoverNav">
+
+                            <div class="quickview">
+                                <a data-toggle="modal" data-target="#product-details-modal"
+                                   class="btn btn-xs  btn-quickview" title="Quick View"> Quick View </a>
+                            </div>
+
+                            <div id="carousel-id-3" class="carousel slide " data-ride="carousel" data-interval="0">
+
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><a href="product-details.html"> <img
+                                            src="/static/images/gallery/poke-mug.jpg" alt="img" class="img-responsive "></a></div>
+                                    <div class="item"><a href="/static/images/gallery/poke-mug.jpg"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-id-3" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-id-3" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="description">
+                            <h4><a href="product-details.html">item desc </a></h4>
+
+                            <div class="grid-description">
+                                <p>item title </p>
+                            </div>
+                            <div class="list-description">
+                                <p> item desc </p>
+                            </div>
+                            <span class="size">XL / XXL / S </span></div>
+                        <div class="price"><span>$25</span></div>
+                        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
+                                class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
+                    </div>
+                </div>
+
+
+                <!--/.item-->
+
+
+               <div class="item itemauto col-sm-4 col-lg-4 col-md-4 col-xs-6">
+                    <div class="product">
+                        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
+                           data-placement="left">
+                            <i class="glyphicon glyphicon-heart"></i>
+                        </a>
+
+
+                        <div class="imageHover">
+
+                            <div class="promotion"><span class="discount">15% OFF</span></div>
+
+                            <div id="carousel-id-1" class="carousel slide" data-ride="carousel" data-interval="0">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-id-1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-id-1" data-slide-to="1"></li>
+                                    <li data-target="#carousel-id-1" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><a href="product-details.html"> <img
+                                            src="/static/images/gallery/poke-mug.jpg" alt="img" class="img-responsive "></a></div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-id-1" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-id-1" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="description">
+                            <h4><a href="product-details.html"> item head </a></h4>
+
+                            <div class="grid-description">
+                                <p>head title of images</p>
+                            </div>
+                            <div class="list-description">
+                                <p> description here</p>
+                            </div>
+                            <span class="size">XL / XXL / S </span></div>
+                        <div class="price"><span>$25</span></div>
+                        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
+                                class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
+                    </div>
+                </div>
+                <!--/.item-->
+
+
+                <div class="item itemauto col-sm-4 col-lg-4 col-md-4 col-xs-6">
+                    <div class="product">
+                        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
+                           data-placement="left">
+                            <i class="glyphicon glyphicon-heart"></i>
+                        </a>
+
+
+                        <div class="imageHover">
+
+                            <div class="promotion"><span class="discount">15% OFF</span></div>
+
+                            <div id="carousel-id-1" class="carousel slide" data-ride="carousel" data-interval="0">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-id-1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-id-1" data-slide-to="1"></li>
+                                    <li data-target="#carousel-id-1" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><a href="product-details.html"> <img
+                                            src="/static/images/gallery/poke-mug.jpg" alt="img" class="img-responsive "></a></div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-id-1" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-id-1" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="description">
+                            <h4><a href="product-details.html"> item head </a></h4>
+
+                            <div class="grid-description">
+                                <p>head title of images</p>
+                            </div>
+                            <div class="list-description">
+                                <p> description here</p>
+                            </div>
+                            <span class="size">XL / XXL / S </span></div>
+                        <div class="price"><span>$25</span></div>
+                        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
+                                class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
+                    </div>
+                </div>
+
+
+                <div class="item itemauto col-sm-4 col-lg-4 col-md-4 col-xs-6">
+                    <div class="product">
+                        <a class="add-fav tooltipHere" data-toggle="tooltip" data-original-title="Add to Wishlist"
+                           data-placement="left">
+                            <i class="glyphicon glyphicon-heart"></i>
+                        </a>
+
+
+                        <div class="imageHover">
+
+                            <div class="promotion"><span class="discount">15% OFF</span></div>
+
+                            <div id="carousel-id-1" class="carousel slide" data-ride="carousel" data-interval="0">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-id-1" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-id-1" data-slide-to="1"></li>
+                                    <li data-target="#carousel-id-1" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active"><a href="product-details.html"> <img
+                                            src="/static/images/gallery/poke-mug.jpg" alt="img" class="img-responsive "></a></div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                    <div class="item"><a href="product-details.html"> <img src="/static/images/gallery/poke-mug.jpg"
+                                                                                           alt="img"
+                                                                                           class="img-responsive "></a>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-id-1" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-id-1" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="description">
+                            <h4><a href="product-details.html"> item head </a></h4>
+
+                            <div class="grid-description">
+                                <p>head title of images</p>
+                            </div>
+                            <div class="list-description">
+                                <p> description here</p>
+                            </div>
+                            <span class="size">XL / XXL / S </span></div>
+                        <div class="price"><span>$25</span></div>
+                        <div class="action-control"><a class="btn btn-primary"> <span class="add2cart"><i
+                                class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a></div>
+                    </div>
+                </div>
+
+
+                <!--/.item-->
+
+
+            </div>
+            <!--/.categoryProduct || product content end-->
+
+            <div class="w100 categoryFooter">
+                <div class="pagination pull-left no-margin-top">
+                    <ul class="pagination no-margin-top">
+                        <li><a href="#">«</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">»</a></li>
+                    </ul>
+                </div>
+                <div class="pull-right pull-right col-sm-4 col-xs-12 no-padding text-right text-left-xs">
+                    <p>Showing 1–450 of 12 results</p>
+                </div>
+            </div>
+            <!--/.categoryFooter-->
         </div>
-        <div class="modal-body">
-          <div class="form-group">
-    		<label for="exampleInputEmail1">Email address</label>
-    		<input class="form-control" id="exampleInputEmail1" placeholder="Enter email" type="email">
-  		  </div>
-		  <div class="form-group">
-		  	<label for="exampleInputPassword1">Password</label>
-			<input class="form-control" id="exampleInputPassword1" placeholder="Password" type="password">
-		  </div>
-          <p class="text-right"><a href="#">Forgot password?</a></p>
-        </div>
-        <div class="modal-footer">
-          <a href="#" data-dismiss="modal" class="btn">Close</a>
-          <a href="#" class="btn btn-primary">Log-in</a>
-        </div>
-      </div>
+        <!--/right column end-->
     </div>
+    <!-- /.row  -->
 </div>
+    </div>
 
 
 <!--
 -->
+
 
    {% include 'footer.html' %}
 
