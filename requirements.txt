@@ -1,1 +1,4 @@
-web.py
+dj-database-url==0.4.1
+gunicorn==19.6.0
+web.py==0.38
+whitenoise==3.2
