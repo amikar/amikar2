@@ -40,7 +40,6 @@ class UserProfile(models.Model):
         user = models.OneToOneField(User)
         # These fields are optional
         website = models.URLField(blank=True)
-        picture = models.ImageField(upload_to='/static/images', blank=True)
 
         def __unicode__(self):
                 return self.user.username
@@ -53,4 +52,4 @@ class UserForm(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
         class Meta:
                 model = UserProfile
-                fields = ['website','picture']
+                fields = ['website']

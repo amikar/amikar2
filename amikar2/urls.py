@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from website import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,9 +25,8 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.category, name='category'),
     url(r'^product/' , views.product_view, name='product_view'),
-    url(r'^login/' , views.login_view, name='login_view'),
-    url(r'^register/$', views.register, name='register')
-
-
+    url(r'^login/$', views.user_login, name='login'),
+    url(r'^register/$', views.register, name='register'),
+    url(r'restricted', views.restricted, name='restricted')
 
 ]

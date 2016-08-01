@@ -2,26 +2,74 @@
 
 <style>
 body{
-    background-color: white;
+    background-color: black;
 }
+    .vertical-offset-100{
+    padding-top:100px;
+}
+    #top2  {
+        padding-top: 330px;
+        padding-bottom: 130px;
+        background-color: #1C1D21;
+    }
+    .panel-body {
+        color:orangered;
+    }
+    .input{
+        color : red;
+    }
+    .panel-title {
+        color: orangered;
+    }
+   .panel-heading a {
+        color: green;
+       margin-left: 120px;
+       margin-right: 0;
+       text-decoration: underline;
+          }
+
 </style>
 <body>
 {% include 'header.html' %}
 
-<br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<a href="/register">Register Here</a>
+
+
+
+<div class="container">
+    <div class="row vertical-offset-100" id="top2">
+    	<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default">
+
+
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Please sign in
+                    <a class = "reg" href="/register">Register Here</a></h3>
 
  {% if registered %}
         <A href="/">Rango</A> says: thank you for registering.
 {% else %}
-        rango says: register here!
-        <FORM id="user_form" method="post" action="/register" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ uform.as_p }}
-                {{ pform.as_p }}
-                <INPUT type="submit" name="submit" value="submit" />
+			 	</div>
+			  	<div class="panel-body">
+			    	  <FORM id="login_form" method="post" action="/login/">
+        {% csrf_token %}
+                <p class = "input">Username:</p>
+                <input type="text" name="username" value="" id="username" size="36" />
+            <br/>
+                <p class = "input">Password:</p>
+                <input type="password" name="password" value="" id="password" size="36" />
+                <br/><br/>
+                           <INPUT type="submit" name="submit" value="submit" />
+                          {% if serverDetails.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
         </FORM>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 {% endif %}
 
 

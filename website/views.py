@@ -8,7 +8,12 @@ from website.models import UserProfile
 from website.models import UserForm, UserProfileForm
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
-from amikar2.settings import STATICFILES_DIRS
+from amikar2.settings import MEDIA_ROOT
+from django.contrib.auth import authenticate, login, logout
+from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+
+
 
 # Create your views here.
 def index(request):
@@ -75,8 +80,6 @@ def register(request):
                         user.save()
                         profile = pform.save(commit = False)
                         profile.user = user
-                        profile.save()
-                        save_file(request.FILES['picture'])
                         registered = True
                 else:
                         print uform.errors, pform.errors
@@ -87,9 +90,29 @@ def register(request):
         return render_to_response('register.html', {'uform': uform, 'pform': pform, 'registered': registered }, context)
 
 
-def save_file(file, path=''):
-        filename = file._get_name()
-        fd = open('%s/%s' % (STATICFILES_DIRS, str(path) + str(filename)), 'wb' )
-        for chunk in file.chunks():
-                fd.write(chunk)
-        fd.close()
+def user_login(request):
+    context = RequestContext(request)
+    if request.method == 'POST':
+          username = request.POST['username']
+          password = request.POST['password']
+          user = authenticate(username=username, password=password)
+          if user is not None:
+              if user.is_active:
+                  login(request, user)
+                  # Redirect to index page.
+                  return HttpResponseRedirect("/")
+              else:
+                  # Return a 'disabled account' error message
+                  return HttpResponse("You're account is disabled.",RequestContext(request))
+          else:
+              # Return an 'invalid login' error message.
+              print  "invalid login details"
+              return render_to_response('login.html',{},context)
+
+    else:
+        # the login is a  GET request, so just show the user the login form.
+        return render_to_response('login.html', {}, RequestContext(request))
+
+@login_required
+def restricted(request):
+    return HttpResponse('since you are an authenticated user you can view this restricted page.',RequestContext(request))
