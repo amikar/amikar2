@@ -1,1 +1,1 @@
-web: gunicorn amikar2.wsgi
+web: gunicorn amikar2.wsgi --log-file -
